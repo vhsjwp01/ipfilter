@@ -21,7 +21,6 @@ if [ -z "${BASH_VERSION}" ] || [ "${BASH_VERSION%%.*}" -lt 4 ]; then
 	exit 1
 fi
 
-
 # --------------------------------------
 #                                      -
 #  Configuration                       -
@@ -30,8 +29,8 @@ fi
 
 # Script
 SCRIPT_TITLE="IP Filter Updater & Generator"
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-SCRIPT_FILE="$(basename "$0")"
+SCRIPT_DIR="$(dirname $(realpath -L "$0"))"
+SCRIPT_FILE="$(basename $(realpath -L "$0"))"
 SCRIPT_NAME="${SCRIPT_FILE%.*}"
 SCRIPT_CONFIG="${SCRIPT_DIR}/${SCRIPT_NAME}.conf"
 
