@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+#set -x
+
+PATH="/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin"
+TERM="vt100"
+export TERM PATH
 
 # -------------------------------------------------------------------------
 #                                                                         -
